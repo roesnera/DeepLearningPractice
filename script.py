@@ -67,3 +67,5 @@ my_model.fit(standardized_features_train, labels_train, batch_size=4, epochs=10,
 
 my_model.evaluate(standardized_features_test, labels_test, batch_size=4, verbose=2)
 
+predicted_values = my_model.predict(standardized_features_test)
+print(r2_score(labels_test, predicted_values))
